@@ -1,7 +1,7 @@
 ## Available Scripts
 
 In the project directory, you can run:
-
+### 'npm install'
 ### `sudo yarn start`
 ### `yarn build`
 
