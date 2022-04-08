@@ -1,0 +1,73 @@
+.device-list-menu {
+  width: 200px;
+  font-size: 14px;
+  color: #fff;
+  padding-bottom: 10px;
+  user-select: none;
+  .device-list-menu-header {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .menu-item {
+    padding: 10px 30px 10px 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      background-color: #13253b;
+    }
+    &.selected {
+      background-image: url("../../assets/images/buttons/done_white.svg");
+      background-repeat: no-repeat;
+      background-position: right 7px top 50%;
+      background-size: 24px 24px;
+    }
+    span {
+      line-height: 18px;
+    }
+  }
+  .default-device-message {
+    padding: 5px 12px;
+    color: #ccc;
+    white-space: normal;
+    font-size: 12px;
+    text-align: justify;
+  }
+}
+.guest-beauty-screen .device-menu-disabled,
+.guest-access-code-screen .device-menu-disabled {
+  width: 24px;
+}
+.guest-beauty-screen .device-menu-off,
+.guest-access-code-screen .device-menu-off {
+  width: 10px;
+}
+
+@supports (-webkit-line-clamp: 2) {
+  .device-list-menu .menu-item span {
+    line-height: 18px;
+    white-space: unset;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.bp3-popover {
+  &.device-menu-popover {
+    .bp3-popover-content {
+      background: #3d5878;
+    }
+    .bp3-popover-arrow-border,
+    .bp3-popover-arrow-fill {
+      fill: #3d5878;
+    }
+  }
+}

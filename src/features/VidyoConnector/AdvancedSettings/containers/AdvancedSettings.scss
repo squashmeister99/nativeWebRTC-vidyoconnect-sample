@@ -1,0 +1,37 @@
+.vidyo-advanced-settings-button {
+  width: 240px !important;
+  margin: 10px 0;
+}
+
+.vidyo-advanced-settings {
+  width: max-content;
+  overflow: auto;
+
+  .log-levels {
+    .bp3-popover-target + .bp3-overlay .bp3-popover {
+      width: fit-content;
+      max-width: 90vw;
+
+      .bp3-popover-content {
+        padding: 20px 8px 20px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 777px) {
+  .vidyo-advanced-settings {
+    height: calc(100vh - 120px);
+  }
+}
+
+@media screen and (max-width: 712px),
+  (orientation: landscape) and (max-width: 760px) {
+  .vidyo-advanced-settings {
+    .log-levels {
+      .bp3-popover-target + .bp3-overlay .bp3-popover {
+        max-width: 280px;
+      }
+    }
+  }
+}

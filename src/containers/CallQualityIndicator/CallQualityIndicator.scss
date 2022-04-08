@@ -1,0 +1,14 @@
+#call-quality-indicator {
+  padding: 0 2px;
+}
+#call-quality-indicator .font-green path {
+  fill: #82c36c;
+}
+
+#call-quality-indicator .font-yellow path {
+  fill: #edb000;
+}
+
+#call-quality-indicator .font-red path {
+  fill: #ed0f00;
+}

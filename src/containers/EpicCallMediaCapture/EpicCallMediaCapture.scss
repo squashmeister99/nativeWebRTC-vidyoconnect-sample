@@ -1,0 +1,25 @@
+.make-snapshot {
+  background-image: url("../../assets/images/buttons/snapshot.svg");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  margin-left: 5px;
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 15px;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+#renderer
+  .vidyo-rendering-container
+  .media-grid
+  .video-overlay
+  .video-display-name-wrapper
+  .video-display-name::before {
+  width: 140px;
+}

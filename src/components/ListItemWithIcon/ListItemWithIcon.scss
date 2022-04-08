@@ -1,0 +1,53 @@
+.cm-list-item-icon {
+  position: relative;
+  display: block;
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  line-height: 22px;
+  padding-left: 25px;
+  text-decoration: none;
+  opacity: 0.9;
+  cursor: default;
+  background-size: 16px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &--big {
+    padding: 12px 0;
+    padding-left: 40px;
+
+    @media screen and (max-height: 450px) {
+      padding: 6px 0;
+      padding-left: 40px;
+    }
+  }
+}
+
+.cm-list-item {
+  transition: opacity 100ms;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.bp3-portal .bp3-tooltip.cm-panel-tooltip {
+  .bp3-popover-content {
+    max-width: 310px;
+    background: #fff;
+    padding: 15px 20px;
+    color: #182026;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .bp3-popover-arrow-border,
+  .bp3-popover.bp3-tooltip .bp3-popover-arrow-fill {
+    fill: #fff;
+  }
+}

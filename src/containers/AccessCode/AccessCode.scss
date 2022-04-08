@@ -1,0 +1,34 @@
+.access-code-container {
+  padding: 20px 0;
+  font-style: inherit;
+
+  .header {
+    margin-bottom: 20px;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &:nth-child(1) {
+        line-height: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      &:nth-child(2) {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .bp3-popover-wrapper {
+    .bp3-popover-target {
+      width: 100%;
+    }
+  }
+}

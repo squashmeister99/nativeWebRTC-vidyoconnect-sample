@@ -1,0 +1,25 @@
+.secure-status-container {
+  margin: 0;
+  padding: 0;
+
+  .secure-status-icon {
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/indicators/ic_secure.svg") no-repeat
+      center center;
+
+    &.unsecure {
+      background: url("../../assets/images/indicators/ic_unsecure.svg")
+        no-repeat center center;
+    }
+  }
+}
+
+.secure-status-wrap {
+  display: flex;
+  align-items: center;
+
+  .bp3-popover-wrapper {
+    display: flex;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "SETTINGS_PROCESSING_ERROR": "Unavailable. Trying again...",
+  "SEE_LAST_ERROR_LINK": "Error details",
+  "SEE_LAST_ERROR_HEADER": "An error occurred while checking device status",
+  "TYTO_EXAM_EXISTS_MESSAGE": "TytoCare exam in progress. Please end the existing <a class=\"${0}\">TytoCare exam</a> in order to start a new one.",
+  "TYTO_END_EXAM_FAILED_HEADER": "TytoCare exam was not ended.",
+  "TYTO_END_EXAM_FAILED_MESSAGE": "Please contact your administrator or try again later.",
+  "CAMERA_DISABLED": "Camera disabled",
+  "MICROPHONE_DISABLED": "Microphone disabled",
+  "SPEAKER_DISABLED": "Speaker disabled",
+  "TC_PP_GUEST": "Agree to the Vidyo <a target=\"_blank\" href=\"{{terms}}\">User Terms & Conditions</a> & <a target=\"_blank\" href=\"{{privacy}}\">Privacy Policy</a>",
+  "CLOSE_MODERATE_CALL": "Close moderation panel",
+  "ADRESS_FROMAT_WRONG": "Address format is wrong",
+  "LOADING_BLUR_EFFECT": "Loading blur effect..."
+}

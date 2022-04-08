@@ -1,0 +1,23 @@
+.initial-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    width: 224px;
+
+    .initial-loader {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media only screen and (min-height: 450px) {
+  .initial-screen {
+    .content {
+      transform: translateY(-40px);
+    }
+  }
+}

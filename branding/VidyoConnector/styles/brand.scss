@@ -1,0 +1,19 @@
+$radial-gradient-background: radial-gradient(#505050, #363636);
+
+button {
+  outline: none !important;
+}
+
+.initial-screen {
+  .loading-block {
+    background-color: transparent !important;
+  }
+}
+
+.guest-beauty-screen {
+  .content-blocks {
+    .loading {
+      background-color: transparent !important;
+    }
+  }
+}

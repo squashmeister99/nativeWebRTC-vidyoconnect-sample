@@ -1,0 +1,43 @@
+.bp3-alert.bp3-dialog {
+  .bp3-alert-contents {
+    .message-header {
+      flex: 1 1 auto;
+      font-size: 20px;
+      text-align: center;
+      padding: 0 0 8px 0;
+    }
+    .message-content {
+      flex: 1 1 auto;
+      font-size: 14px;
+      text-align: left;
+      padding: 8px 0 16px 0;
+
+      a,
+      a:active,
+      a:visited,
+      a:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.popup-without-button {
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    .bp3-alert-footer {
+      display: none;
+    }
+    .bp3-alert-contents .message-content {
+      text-align: center;
+    }
+  }
+  &.popup-with-button {
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .bp3-alert-contents .message-content {
+      text-align: center;
+    }
+  }
+}

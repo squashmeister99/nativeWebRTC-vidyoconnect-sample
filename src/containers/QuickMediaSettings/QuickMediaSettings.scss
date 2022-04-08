@@ -1,0 +1,68 @@
+.quick-media-settings {
+  .media-devices {
+    .device-toggle {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 8px;
+      align-items: center;
+      .toggle-label {
+        flex: 1;
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding-right: 5px;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 14px;
+        flex-direction: column;
+        .speaker-test-wrapper {
+          padding-top: 6px;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          #speaker-test-btn {
+            outline: none;
+            border: none;
+            display: inline-block;
+            width: 12px;
+            height: 15px;
+            background-image: url(../../assets/images/buttons/icon_play.svg);
+            background-repeat: no-repeat;
+            background-position: left top 1px;
+            background-color: transparent;
+            &.playing {
+              background-image: url(../../assets/images/buttons/icon_stop.svg);
+            }
+          }
+          .speaker-test-label {
+            margin-left: 5px;
+            font-size: 11px;
+            line-height: 15px;
+          }
+        }
+      }
+      .device-menu-toggle {
+        outline: none;
+        border: none;
+        background-image: url(../../assets/images/buttons/white-arrow.svg);
+        transform: rotate(180deg) translateY(-10%);
+        background-size: 8px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-origin: border-box;
+        background-color: transparent;
+        width: 16px;
+        height: 16px;
+        margin: 0 4px;
+      }
+      .device-menu-popover-target.bp3-popover-open {
+        .device-menu-toggle {
+          transform: rotate(0) translateY(10%);
+        }
+      }
+    }
+  }
+  .self-view {
+    margin-top: 20px;
+  }
+}
