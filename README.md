@@ -1,7 +1,7 @@
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
-This sample application showcases Vidyo's browser based videoconferencing platform. It works on all modern desktop and mobile browsers and uses webRTC technology. This sample application can be used to host live meetings (small and large), and also supports features like screen-sharing, private chat, group chat etc.
+This sample application showcases Vidyo's browser based videoconferencing platform. It works on all modern desktop and mobile browsers and uses webRTC technology. This sample application can be used to host live meetings (small and large)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
