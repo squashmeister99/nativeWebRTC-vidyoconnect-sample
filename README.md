@@ -85,15 +85,3 @@ Company Link: https://www.vidyo.com/company/contact-vidyo
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-
-
-
-
-
-In the project directory, you can run:
-### `npm install`
-### `sudo yarn start`
-### `yarn build`
-
-
