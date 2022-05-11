@@ -44,13 +44,15 @@ const RoomLink = () => {
         ></div>
         <div className="header-room-link__url">{roomUrl}</div>
       </div>
-      <div className="header-room-link">
-        <div
-          className="header-room-link__copy"
-          onClick={copyRoomPinHandler}
-        ></div>
-        <div className="header-room-link__url">PIN: {pin}</div>
-      </div>
+      {pin && (
+        <div className="header-room-link">
+          <div
+            className="header-room-link__copy"
+            onClick={copyRoomPinHandler}
+          ></div>
+          <div className="header-room-link__url">PIN: {pin}</div>
+        </div>
+      )}
     </>
   );
 };
