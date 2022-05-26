@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import MainLogo from "assets/Logo_black.svg";
 import {
   patentNotices,
   vidyoOSSAttributions,
@@ -40,12 +39,6 @@ const AboutTab = () => {
       <div className="settings-tab-content-body">
         <div className="tab-content-body-panel">
           <div className="about-details">
-            <img
-              className="about-neo-logo"
-              {...test("ABOUT_VIDYOCONNECT_LOGO")}
-              alt="Logo"
-              src={MainLogo}
-            />
             <div className="about-neo" {...test("ABOUT_VIDYOCONNECT")}>
               {t("ABOUT")} {process.env.REACT_APP_NAME}
               <sup>TM</sup>

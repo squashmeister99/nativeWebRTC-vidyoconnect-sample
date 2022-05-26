@@ -1,5 +1,5 @@
 import React from "react";
-import MainLogo from "assets/Logo_white.svg";
+import MainLogo from "assets/vidyoPlatformLogo.png";
 import { test } from "utils/helpers";
 import "./MainLogoWhite.scss";
 
