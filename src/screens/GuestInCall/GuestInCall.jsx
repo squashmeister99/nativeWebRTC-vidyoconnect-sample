@@ -9,7 +9,7 @@ import * as callActionCreators from "store/actions/call";
 import * as userActionCreators from "store/actions/user";
 import * as chatActionCreators from "store/actions/chat";
 import * as googleAnalytics from "store/actions/googleAnalytics";
-import { Button, Position, Tooltip } from "@blueprintjs/core";
+import { Button, Icon, Position, Tooltip } from "@blueprintjs/core";
 import storage from "utils/storage";
 import Sidebar from "components/Sidebar";
 import Chat from "containers/Chat";
@@ -181,6 +181,7 @@ const GuestInCall = ({
   const [isSidebarOpen, setSidebarState] = useState(false);
   const [isChatOpen, setChatState] = useState(false);
   const [areSettingsRendered, setSettingsRenderState] = useState(false);
+  const [adHocRoomInfoRendered, setAdHocRoomInfoRendered] = useState(false);
   const [invitePopupOpened, setInvitePopupOpened] = useState(false);
   const [dataForAudioVideoContent, setDataForAudioVideoContent] =
     useState(null);
@@ -683,6 +684,13 @@ const GuestInCall = ({
             {callName}
           </div>
           <div className="header-section-right">
+            {!isMobileDimension && (
+              <Icon
+                icon="info-sign"
+                size={28}
+                onClick={() => setAdHocRoomInfoRendered(true)}
+              />
+            )}
             {!isMobileDimension &&
               (<VidyoConnector.AdHocRoom.RoomLink /> || <RoomLink />)}
             <SecureConnectionStatus />
@@ -777,6 +785,13 @@ const GuestInCall = ({
         </div>
       </div>
       <Chat isChatOpen={isChatOpen} toggleChat={toggleChat} />
+      <Modal>
+        {adHocRoomInfoRendered && (
+          <VidyoConnector.AdHocRoom.AdHocRoomInfoDialog
+            onClose={() => setAdHocRoomInfoRendered(false)}
+          />
+        )}
+      </Modal>
       <Modal>
         {areSettingsRendered && <Settings onClose={toggleSettings} />}
       </Modal>

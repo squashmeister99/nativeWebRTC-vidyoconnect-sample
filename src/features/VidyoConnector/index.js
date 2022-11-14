@@ -23,5 +23,6 @@ if (process.env.REACT_APP_VC_CREATE_ADHOC_ROOM_ENABLED === "true") {
 } else {
   module.exports.AdHocRoom = {
     RoomLink: () => null,
+    AdHocRoomInfoDialog: () => null,
   };
 }

@@ -44,6 +44,13 @@ const AdHocRoomDialogs = ({ onJoin }) => {
     );
   }
 
+  function wrapLinks(text) {
+    return text?.replace(
+      /(?:(https?:\/\/[^\s]+))/gm,
+      '<a href="$1" target="_blank">$1</a>'
+    );
+  }
+
   return (
     <>
       {adHocRoom.isCreated && !isAdHocRoomDialogOpen && (
@@ -58,9 +65,12 @@ const AdHocRoomDialogs = ({ onJoin }) => {
         onClose={() => showAdHocRoomDialog(false)}
       >
         <div className={Classes.DIALOG_BODY}>
-          <pre style={{ whiteSpace: "pre-wrap" }}>
-            {adHocRoom.inviteContent}
-          </pre>
+          <pre
+            style={{ whiteSpace: "pre-wrap" }}
+            dangerouslySetInnerHTML={{
+              __html: wrapLinks(adHocRoom.inviteContent),
+            }}
+          />
           <Button
             fill={true}
             className={Classes.INTENT_SUCCESS}
