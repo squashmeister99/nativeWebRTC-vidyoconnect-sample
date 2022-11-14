@@ -35,6 +35,9 @@
     .guest-logout-message-description {
       font-weight: 300;
       font-size: 15px;
+      a {
+        color: #0080ff;
+      }
     }
 
     .guest-error-message {

@@ -3,14 +3,12 @@ import { connect } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { bindActionCreators } from "redux";
 import * as callActionCreators from "store/actions/call";
-import { useHistory } from "react-router-dom";
-import { Button } from "@blueprintjs/core";
+//import { useHistory } from "react-router-dom";
 import GuestSettingsIcon from "components/GuestSettingsIcon";
 import MainLogoWhite from "components/MainLogoWhite";
 import Settings from "containers/Settings";
 import Modal from "components/Modal";
 import { test } from "utils/helpers";
-import { isAndroid } from "react-device-detect";
 import * as googleAnalytics from "../../store/actions/googleAnalytics";
 import Alert from "components/Alert";
 
@@ -26,8 +24,8 @@ const mapDispatchToProps = (dispatch) => ({
   ...bindActionCreators(callActionCreators, dispatch),
   ...bindActionCreators(googleAnalytics, dispatch),
 });
-let postCallUrlTimer = null;
-const postCallUrlDelay = 5000;
+//let postCallUrlTimer = null;
+//const postCallUrlDelay = 5000;
 
 const GuestPostCall = ({
   rejoinCall,
@@ -37,7 +35,7 @@ const GuestPostCall = ({
   gaOpenPostCallURL,
 }) => {
   const [isAlertOpen, setIsAlertOpen] = useState(true);
-  const history = useHistory();
+  //const history = useHistory();
   const { t } = useTranslation();
   const [areSettingsRendered, setSettingsRenderState] = useState(false);
   const [isPostCallUrlOpened, showPostCallUrl] = useState(false);
@@ -45,7 +43,7 @@ const GuestPostCall = ({
   const isFailed = // TODO: support different providers
     disconnectReason !== "VIDYO_CONNECTORDISCONNECTREASON_Disconnected";
 
-  function handleClick() {
+  /*function handleClick() {
     clearTimeout(postCallUrlTimer);
     if (isAndroid) {
       window.location.reload();
@@ -54,7 +52,7 @@ const GuestPostCall = ({
       history.entries.length = 0;
       history.push("/InitialScreen", { rejoin: true });
     }
-  }
+  }*/
 
   function toggleSettings() {
     setSettingsRenderState(!areSettingsRendered);
@@ -73,9 +71,9 @@ const GuestPostCall = ({
       if (reURL.test(postCallURL)) {
         const openWindow = window.open(postCallURL, "_blank");
         if (!openWindow) {
-          postCallUrlTimer = setTimeout(() => {
+          /*postCallUrlTimer = setTimeout(() => {
             window.location.href = postCallURL;
-          }, postCallUrlDelay);
+          }, postCallUrlDelay);*/
         }
         gaOpenPostCallURL(postCallURL);
         showPostCallUrl(true);
@@ -144,17 +142,18 @@ const GuestPostCall = ({
               className="guest-logout-message-description"
               {...test("DISCONNECT_CALL_DESCRIPTION")}
             >
-              {t("CLICK_REJOIN_CALL")}
+              To learn more and signup for a new trial account please reach us
+              at
+              <a
+                href="https://www.vidyo.com/develop-video-app-platform/#contact-us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                https://www.vidyo.com/develop-video-app-platform/#contact-us
+              </a>
             </p>
           </div>
-          <Button
-            {...test("REJOIN_BUTTON")}
-            fill={true}
-            onClick={handleClick}
-            className="bp3-intent-success"
-          >
-            {t("REJOIN_THE_CALL")}
-          </Button>
         </div>
       </div>
       <Modal>
