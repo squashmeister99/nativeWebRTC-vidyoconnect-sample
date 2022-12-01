@@ -79,13 +79,14 @@ const initialState = {
 
 const devices = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_CAMERAS:
+    case UPDATE_CAMERAS: {
+      const selectedCamera = action.cameras.find((d) => d.selected);
       return {
         ...state,
         cameras: [...action.cameras],
-        selectedCamera: action.cameras.find((d) => d.selected) || null,
+        selectedCamera: selectedCamera ? { ...selectedCamera } : null,
       };
-
+    }
     case UPDATE_REMOTE_CAMERAS:
       return {
         ...state,
